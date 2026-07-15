@@ -10,4 +10,4 @@ redirect_from:
 {% include base_path %}
 
 
-[**📄 Please click here to view / download my CV (PDF)**]({{ base_path }}/files/CV.pdf)
+[**Please click here to view / download my CV (PDF)**]({{ base_path }}/files/CV.pdf)
