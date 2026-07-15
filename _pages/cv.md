@@ -9,6 +9,5 @@ redirect_from:
 
 {% include base_path %}
 
-You can view or download my Curriculum Vitae by clicking the link below:
 
-[**📄 Click here to view / download my CV (PDF)**]({{ base_path }}/files/CV.pdf)
+[**📄 Please click here to view / download my CV (PDF)**]({{ base_path }}/files/CV.pdf)
