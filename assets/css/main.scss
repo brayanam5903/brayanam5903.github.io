@@ -37,3 +37,18 @@
     "layout/sidebar",
     "layout/json_cv"
 ;
+
+/* --- 强制修复 Footer 遮挡问题 --- */
+.initial-content, 
+#main {
+  display: flow-root !important; /* 建立新的块级格式化上下文，强制包含所有浮动元素，撑开高度 */
+  min-height: 80vh;              /* 保证页面即使没内容也有一定高度 */
+  padding-bottom: 50px;          /* 给底部留出呼吸空间 */
+}
+
+.page__footer {
+  position: relative !important; /* 确保 Footer 不会变成固定定位 */
+  clear: both !important;        /* 强制清除上方所有的浮动 */
+  z-index: 100;                  /* 确保层级正常 */
+  margin-top: 3rem;
+}
