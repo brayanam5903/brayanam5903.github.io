@@ -38,17 +38,35 @@
     "layout/json_cv"
 ;
 
-/* --- 强制修复 Footer 遮挡问题 --- */
-.initial-content, 
-#main {
-  display: flow-root !important; /* 建立新的块级格式化上下文，强制包含所有浮动元素，撑开高度 */
-  min-height: 80vh;              /* 保证页面即使没内容也有一定高度 */
-  padding-bottom: 50px;          /* 给底部留出呼吸空间 */
+/* --- 修复 Footer 遮挡正文的问题 --- */
+
+/* 1. 强制 footer 使用普通文档流，不再脱离/固定 */
+.page__footer {
+  position: static !important;   /* 关键：取消 fixed / sticky */
+  bottom: auto !important;
+  clear: both;
+  float: none !important;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+/* 2. 让整个页面用 flex 布局，把 footer 自然顶到底部
+      （当内容较少时也不会飘到中间） */
+html, body {
+  height: auto;
+  min-height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.initial-content {
+  flex: 1 0 auto;   /* 撑开中间区域 */
 }
 
 .page__footer {
-  position: relative !important; /* 确保 Footer 不会变成固定定位 */
-  clear: both !important;        /* 强制清除上方所有的浮动 */
-  z-index: 100;                  /* 确保层级正常 */
-  margin-top: 3rem;
+  flex-shrink: 0;   /* footer 不被压缩 */
 }
