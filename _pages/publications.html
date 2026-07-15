@@ -1,33 +1,55 @@
 ---
 layout: archive
-title: "Publications"
+title: "Research"
 permalink: /research/
 author_profile: true
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<h2>Working Papers</h2>
+<hr />
 
-{% include base_path %}
+<div style="margin-bottom: 25px;">
+  <p>
+    <b>Role Uncertainty and Punishment Severity in Repeated Cheap Talk: Theory and Experiment</b> <br>
+    (with Wooyoung Lim) <br>
+    <span style="color: #006633; font-weight: bold;">[Job Market Paper]</span> | <i>Revise and Resubmit at Games and Economic Behavior</i> <br>
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5314097">[Working Paper]</a> | <a href="/files/JMP_slides.pdf">[Conference Slides]</a> <br>
+    <i style="color: #555;">* Please contact me for the latest version.</i>
+  </p>
+</div>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+<div style="margin-bottom: 25px;">
+  <p>
+    <b>First They Came for the Others: A Theory of Divide-and-Conquer</b> <br>
+    (with Yeon-Koo Che and Wooyoung Lim) <br>
+    <a href="https://arxiv.org/abs/2607.12371">[Working Paper]</a>
+  </p>
+</div>
+
+
+<h2>Works in Progress</h2>
+<hr />
+
+<div style="margin-bottom: 25px;">
+  <p>
+    <b>First They Came for the Others: A Theory of Divide-and-Conquer (Experiment)</b> <br>
+    (with Yeon-Koo Che and Wooyoung Lim) <br>
+    <b><span style="color: #0275d8;">[Status: ]</span></b> <!-- 你可以在这里修改实验进度 -->
+  </p>
+</div>
+
+<div style="margin-bottom: 25px;">
+  <p>
+    <b>Correlation Sensitivity in Social Context: Theory and Experiment</b> <br>
+    (with Hendrik Rommeswinkel) <br>
+    <b><span style="color: #0275d8;">[Status: Designing Experimental Interface]</span></b> <!-- 你可以在这里修改实验进度 -->
+  </p>
+</div>
+
+<div style="margin-bottom: 25px;">
+  <p>
+    <b>Incentivizing Teamwork: An Experiment</b> <br>
+    (with Timothy Cason and Heng Liu) <br>
+    <b><span style="color: #0275d8;">[Status: Experimental design]</span></b> <!-- 你可以在这里修改实验进度 -->
+  </p>
+</div>
